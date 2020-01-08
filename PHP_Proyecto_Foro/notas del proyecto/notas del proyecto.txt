@@ -1,0 +1,40 @@
+tablas:
+
+categorías:
+
+cada categoría tiene uno o mas threads, contiene una descripción del tópico y un recuento de los Threads(
+Hecho en PHP, no dentro del MySQL)
+
+Threads:
+
+los Threads tienen varios comentarios(tabla)
+habrá un campo que emule un comentario(columna), es decir "el comentario principal"
+la categoría que representan y quien la ha creado
+
+Usuarios: 
+
+los usuarios tienen nombre, e-mail y contraseña hasheada, tiempo de creación
+
+comentarios:
+
+los comentarios tienen título, descripción, autor del mismo, likes y dislikes, tiempo de creación, a que thread pertenecen
+
+mensajes:
+
+estos mensajes son los "susurros" que se envían los usuarios entre sí,
+es una manera directa de hablar con el otro sin que terceros intervengan o cotilleen
+contiene título, descripción, tiempo de creación,id del ususario queién lo mandó e id del usuario quién lo recibió
+
+likes:
+aquí se guardará el like o dislike que el usuario le ha dado a otro en un comentario, es decir
+booleano true o false diciendo si es like o dislike
+id del comentario que el usuario le ha dado like
+id del usuario que le ha dado like
+si el usuario cambia de opinión y quita el like, se hará un delete
+si el usuario cambia de opinión y cambia el like por el dislike, se hará un update del registro
+si el usuario antes no ha hecho nada, y le ha dado a una de las dos cosas se hará un insert into
+
+
+
+
+// miraremos de incluir servicio de mensajería;
